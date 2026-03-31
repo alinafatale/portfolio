@@ -49,7 +49,7 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="py-20 px-4 bg-white">
+    <section id="projects" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,10 +57,10 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center text-gray-900">
-            Featured <span className="text-emerald-600">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+            Featured <span className="text-emerald-400">Projects</span>
           </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
             Here are some of my recent works that showcase my skills and expertise
           </p>
         </motion.div>
@@ -77,17 +77,17 @@ export default function Projects() {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -5 }}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 transition-colors duration-200 shadow-sm hover:shadow-md"
+              className="bg-slate-800/50 border border-slate-700 rounded-lg overflow-hidden hover:border-slate-600 transition-colors duration-200"
             >
               <div className={`${project.image} h-40`} />
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-slate-400 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-sm bg-gray-100 text-gray-700 px-3 py-1 rounded-full"
+                      className="text-sm bg-slate-700 text-slate-200 px-3 py-1 rounded-full"
                     >
                       {tag}
                     </span>
@@ -96,14 +96,14 @@ export default function Projects() {
                 <div className="flex gap-3">
                   <a
                     href={project.link}
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
+                    className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     <ExternalLink size={18} />
                     View
                   </a>
                   <a
                     href={project.github}
-                    className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+                    className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
                   >
                     <Github size={18} />
                     Code

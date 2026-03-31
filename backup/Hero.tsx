@@ -23,25 +23,25 @@ export default function Hero() {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 px-4 bg-white">
+    <section className="min-h-screen flex items-center justify-center pt-20 px-4">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="text-center max-w-4xl"
       >
-        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
+        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold mb-6">
           Hi, I'm{' '}
-          <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
             Nur Alia Alina
           </span>
         </motion.h1>
 
-        <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-700 mb-8">
+        <motion.p variants={itemVariants} className="text-xl md:text-2xl text-slate-300 mb-8">
           Cybersecurity & Risk Management Portfolio
         </motion.p>
 
-        <motion.p variants={itemVariants} className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+        <motion.p variants={itemVariants} className="text-lg text-slate-400 mb-12 max-w-2xl mx-auto">
           Aspiring Cybersecurity Analyst specializing in Risk , Compliance and Security Analysis .
         </motion.p>
 
@@ -51,7 +51,7 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors duration-200 text-white"
+            className="px-8 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold transition-colors duration-200"
           >
             View My Work
           </a>
@@ -63,7 +63,7 @@ export default function Hero() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <ArrowDown className="mx-auto text-gray-600" size={32} />
+          <ArrowDown className="mx-auto text-slate-400" size={32} />
         </motion.div>
       </motion.div>
     </section>

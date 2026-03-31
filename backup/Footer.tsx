@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 py-12 px-4">
+    <footer className="bg-slate-900 border-t border-slate-700 py-12 px-4">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -12,10 +12,10 @@ export default function Footer() {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto text-center"
       >
-        <p className="text-gray-700 mb-4">
+        <p className="text-slate-400 mb-4">
           © {currentYear} Alia Alina. All rights reserved.
         </p>
-        <p className="text-gray-600 text-sm">
+        <p className="text-slate-500 text-sm">
           Built with React, TypeScript, and Tailwind CSS
         </p>
       </motion.div>

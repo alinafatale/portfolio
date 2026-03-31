@@ -21,7 +21,7 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="py-20 px-4 bg-gray-50">
+    <section id="about" className="py-20 px-4 bg-slate-800/50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,8 +29,8 @@ export default function About() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-gray-900">
-            About <span className="text-blue-600">Me</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            About <span className="text-blue-400">Me</span>
           </h2>
         </motion.div>
 
@@ -42,7 +42,7 @@ export default function About() {
           className="grid md:grid-cols-2 gap-12 items-center"
         >
           <motion.div variants={itemVariants} className="space-y-6">
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-slate-300">
               Final-year IT student with CompTIA Security+ certification, focusing on cybersecurity, risk management, and GRC. Experienced in web development (Laravel/PHP) and data visualization, with a strong security-first mindset in system analysis. Currently pursuing Google Project Management Certificate and seeking a 6 month Cybersecurity internship (Analyst/Auditor/GRC).
             </p>
           </motion.div>
