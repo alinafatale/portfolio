@@ -39,9 +39,9 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-12 items-center"
+          className="flex justify-center"
         >
-          <motion.div variants={itemVariants} className="space-y-6">
+          <motion.div variants={itemVariants} className="space-y-6 max-w-2xl text-center">
             <p className="text-lg text-gray-700">
               Final-year IT student with CompTIA Security+ certification, focusing on cybersecurity, risk management, and GRC. Experienced in web development (Laravel/PHP) and data visualization, with a strong security-first mindset in system analysis. Currently pursuing Google Project Management Certificate and seeking a 6 month Cybersecurity internship (Analyst/Auditor/GRC).
             </p>
