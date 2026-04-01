@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { ArrowDown } from 'lucide-react'
 
 export default function Hero() {
   const containerVariants = {
@@ -55,15 +54,6 @@ export default function Hero() {
           >
             View My Work
           </a>
-        </motion.div>
-
-        <motion.div
-          variants={itemVariants}
-          className="mt-16"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <ArrowDown className="mx-auto text-gray-600" size={32} />
         </motion.div>
       </motion.div>
     </section>

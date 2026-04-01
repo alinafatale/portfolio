@@ -3,12 +3,20 @@ import { ExternalLink, Github } from 'lucide-react'
 
 const projects = [
   {
-    title: 'Semantic Body of Knowledge and Technology',
-    description: 'A comprehensive semantic knowledge management platform for organizing and accessing technical information.',
-    tags: ['Knowledge Management', 'Semantic Web', 'Technology'],
-    link: 'https://kulliyyah.iium.edu.my/kict/sbkt/',
-    github: '#',
-    image: 'bg-gradient-to-br from-blue-500 to-cyan-500',
+    title: 'Risk Assessment & Risk Treatment Transport Sector',
+    description: 'Full-stack e-commerce solution with product management, cart, and payment integration.',
+    tags: ['Risk Management', 'Transport', 'Assessment'],
+    link: 'https://docs.google.com/document/d/1WwFMiAMs18cX8pmX4YZxQ5WOeAKdbYkHKr-lMyQtt3M/edit?usp=sharing',
+    github: '',
+    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&h=300&fit=crop',
+  },
+  {
+    title: 'Business Continuity & Disaster Plan of TNB',
+    description: 'Comprehensive business continuity and disaster recovery planning for organizational resilience.',
+    tags: ['Business Continuity', 'Disaster Recovery', 'Planning'],
+    link: 'https://docs.google.com/document/d/1B-Ppk3O6AN2tp3blxZpNNCAn5mgDD4YDxdYJUY4qqbg/edit?usp=sharing',
+    github: '',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop',
   },
   {
     title: 'Weather Monitoring System',
@@ -16,15 +24,15 @@ const projects = [
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts'],
     link: 'https://weather-monitoring-system-production.up.railway.app',
     github: 'https://github.com/alinafatale/Weather-Monitoring-System-',
-    image: 'bg-gradient-to-br from-purple-500 to-pink-500',
+    image: 'https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=500&h=300&fit=crop',
   },
   {
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with product management, cart, and payment integration.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    link: '#',
-    github: '#',
-    image: 'bg-gradient-to-br from-green-500 to-emerald-500',
+    title: 'Semantic Body of Knowledge and Technology',
+    description: 'Customized layout using Elementor and optimized for desktop website performance.',
+    tags: ['Knowledge Management', 'Semantic Web', 'Technology'],
+    link: 'https://kulliyyah.iium.edu.my/kict/sbkt/',
+    github: '',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop',
   },
 ]
 
@@ -70,7 +78,7 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 gap-8"
         >
           {projects.map((project, index) => (
             <motion.div
@@ -79,7 +87,11 @@ export default function Projects() {
               whileHover={{ y: -5 }}
               className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 transition-colors duration-200 shadow-sm hover:shadow-md"
             >
-              <div className={`${project.image} h-40`} />
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-40 object-cover"
+              />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
@@ -101,13 +113,15 @@ export default function Projects() {
                     <ExternalLink size={18} />
                     View
                   </a>
-                  <a
-                    href={project.github}
-                    className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    <Github size={18} />
-                    Code
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+                    >
+                      <Github size={18} />
+                      Code
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
